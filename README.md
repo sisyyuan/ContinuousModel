@@ -39,7 +39,7 @@ By analyzing our recently predicted unprecedentedly complete maps of CRMs and co
 
 ---
 
-## 📊 Data Description
+## Data Description
 
 Each dataset (`.bed`) contains:
 
@@ -62,10 +62,10 @@ The rules governing the static organization and architecture of CRMs in the huma
 
 ## 🔬 Key Contributions
 
-* 🚀 First integration of **LLM semantic knowledge + TWKG topology**
-* 🧠 Captures **cross-domain knowledge (TCM + modern biomedicine)**
-* ⚙️ Introduces **adaptive parameter updating mechanism**
-* 📊 Achieves **state-of-the-art HTI prediction performance**
+* 
+* 
+* 
+* 
 
 ---
 
