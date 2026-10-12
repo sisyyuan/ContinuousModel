@@ -1,130 +1,53 @@
 ---
 
-# 🧠 LLM-Driven Herb–Target Interaction Prediction Framework
+#  Common rules of the organization and architecture of cis-regulatory modules in the human and mouse genomes 
 
-## 📌 Overview
+##  Overview
 
-This project proposes a **large language model (LLM)-driven computational framework** for herb–target interaction (HTI) prediction, aiming to bridge **Traditional Chinese Medicine (TCM)** and **modern biomedical knowledge**.
+By analyzing our recently predicted unprecedentedly complete maps of CRMs and constituent TFBSs in the human and mouse genomes, we reveal static common rules for the landscape and organization of CRMs on the human and mouse chromosomes as well as for the architecture inside of CRMs in terms of their constituent TFBSs and inter-TFBSs spacers. These findings will significantly advance the understanding of regulatory genomes and have a profound impact on the field of gene transcriptional regulation research.
 
-Unlike traditional methods that rely solely on graph structure or handcrafted features, our framework integrates:
-
-* 🧠 **LLM-based semantic representation**
-* 🌐 **Knowledge graph topology**
-* ⚙️ **Adaptive optimization mechanism**
-
-to model the **multi-component and multi-target mechanisms** of TCM.
-
----
-
-## 🧩 Framework Architecture
-
-The proposed framework consists of three major modules:
-
-### 1. Knowledge Graph Construction & Semantic Extraction
-
-* Build a **Traditional Chinese and Western Medicine Knowledge Graph (TWKG)**
-* Use **large language models** to extract **latent semantic embeddings** from:
-
-  * Herb–target interactions
-  * Biomedical databases
-  * TCM literature
-
----
-
-### 2. Graph Representation Learning
-
-* Integrate:
-
-  * 📌 Semantic embeddings (from LLM)
-  * 🔗 Graph topology (from TWKG)
-* Learn joint representations via a **graph neural network (GNN)**
-* Inspired by residual-style collaborative filtering architectures (e.g., LR-GCCF)
-
----
-
-### 3. Target Prediction with Adaptive Optimization
-
-* Introduce a **parameter-adaptive updating mechanism**
-* Dynamically adjusts parameters based on:
-
-  * gradient importance
-* Benefits:
-
-  * ✅ Improved training stability
-  * ✅ Faster convergence
-  * ✅ No change to model architecture
-
----
 
 ## 📄 Abstract
 
-Large language models, owing to their strong knowledge integration capabilities, are reshaping the research paradigm of virtual screening and molecular design and are emerging as a key technological driver of modern drug discovery.
+**Background:** We have recently predicted comprehensive maps of cis-regulatory modules (CRMs) and constituent transcription factor (TF) binding sites (TFBSs) in the human and mouse genomes, enabling us to investigate the static organization and architecture of the CRMs in both genomes. 
+**Results:** We reveal common rules of the static organization and architecture of CRMs in the two genomes. 1) The numbers and lengths of CRMs and genes on chromosomes are correlated with the sizes of chromosomes. 2) CRMs are unevenly but correlatedly distributed with genes along chromosomes. 3) Activation probabilities of CRMs and expression levels of genes within the same topologically associating domain (TAD) show stronger correlation than those outside the TAD. 4) CRMs near the two ends of a TAD tend to have higher TBFS density than those in the middle of the TAD. 5) CRMs are slightly biasedly distributed downstream of their nearest transcription start sites that they do not necessarily regulate. 6) A small but considerable portion (~7%) of CRMs overlap core promoters while the majority (~93%) others do not; thus, CRMs can be classified into core promoter-containing (CPC) and core promoter-lacking (CPL) categories. 7) Most (>90%) of core promoters overlap CRMs, only a small portion (<10%) exist alone. 8) CPC CRMs tend to be longer and contain higher density of TFBSs than CPL CRMs. 9) TFBSs in a CRM exhibit extensive overlaps, forming longer TFBS islands. 10) TFBS islands comprise less than half of CRMs in length. 11) Spacers between TFBS islands are subject to similar evolutionary constraints as TFBS islands and less likely overlap DNase I hypersensitive sites and TF footprints than TFBS islands, suggesting that they may play roles in transcriptional regulation other than direct TF binding.
 
-Inspired by these advances, this study proposes a large-model-driven computational framework for integrative Chinese and Western medicine knowledge graphs, aiming to accurately identify potential herb–target interactions, thereby elucidating the multi-component and multi-target synergistic mechanisms of traditional Chinese medicine and providing methodological support for its development.
-
-This study leverages large language models to extract latent semantic information from herb–target interactions and integrates it with the topological structure of the Traditional Chinese and Western Medicine Knowledge Graph (TWKG), enabling a joint representation of traditional medicine characteristics and their links to modern biomedical knowledge.
-
-On this basis, **we introduce a parameter-adaptive updating mechanism** that dynamically selects parameters according to gradient importance, thereby improving training stability and optimization efficiency without altering the model architecture.
-
-On a large-scale dataset containing **38,002 high-quality HTI pairs**, our method achieves:
-
-* **HR@10 = 0.4702**
-* **NDCG@10 = 0.4026**
-
-outperforming existing baselines.
-
-Collectively, this work provides a new computational framework for herb–target mechanism analysis and intelligent drug discovery driven by the integration of traditional and modern medicine.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 .
-├── code/                     # Training and evaluation scripts
+├── code/                     # Data Analyses
 │   ├── train.py
 │   ├── test.py
-│
-├── Knowledge_embedding/     # Precomputed semantic embeddings
-│   ├── herb_embedding.txt
-│   ├── gene_embedding.txt
-│
+│   ├── train.py
+│   ├── test.py
+│   ├── train.py
+│   ├── test.py
+│   ├── train.py
+│   ├── test.py
+│   ├── train.py
+│   ├── test.py
+│   ├── train.py
+│   ├── test.py
+
 ├── data/
-│   ├── training_set.npy
-│   ├── testing_set.npy
-│   ├── val_set.npy
-│   ├── set_all.npy
-│   ├── name2id
-│
-├── fig1.jpg                 # Model architecture
-├── requirements.txt
+│   ├── Human/
+│   ├── Mouse/
 └── README.md
-```
-
----
-
-## ⚙️ Environment Setup
-
-We recommend using **Anaconda**:
-
-```bash
-conda create -n LLM-HTI python=3.9
-conda activate LLM-HTI
-pip install -r requirements.txt
 ```
 
 ---
 
 ## 📊 Data Description
 
-Each dataset (`.npy`) contains:
+Each dataset (`.bed`) contains:
 
-* Herb–target interaction pairs
-* Bidirectional mappings:
-
-  * herbs → targets
-  * targets → herbs
-* Interaction statistics
+* chromosome
+* start site
+* end site
 
 Additional file:
 
@@ -132,59 +55,10 @@ Additional file:
 
 ---
 
-## 🚀 Usage
 
-### 1. Prepare Embeddings
+## Results
 
-* Generate semantic embeddings using LLMs
-* Store in:
-
-```
-/Knowledge_embedding/
-```
-
----
-
-### 2. Train Model
-
-```bash
-cd code
-python train.py
-```
-
----
-
-### 3. Evaluate Model
-
-```bash
-cd code
-python test.py
-```
-
----
-
-## 📌 Notes
-
-* Ensure **embedding dimensions match model input dimensions**
-* The framework is **not strictly end-to-end**:
-
-  * LLM embeddings are precomputed
-* Supports flexible replacement of:
-
-  * LLM models
-  * GNN architectures
-
----
-
-## 📈 Results
-
-| Metric  | Score  |
-| ------- | ------ |
-| HR@10   | 0.4702 |
-| NDCG@10 | 0.4026 |
-
-✅ Demonstrates strong ranking performance on HTI prediction
-✅ Outperforms existing baseline methods
+The rules governing the static organization and architecture of CRMs in the human and mouse genomes are highly conserved.
 
 ---
 
@@ -203,21 +77,12 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{XXX2026,
-  title={LLM-Driven Herb–Target Interaction Prediction via Integrative Knowledge Graph Learning},
+  title={Common rules of the organization and architecture of cis-regulatory modules in the human and mouse genomes},
   author={XXX},
   journal={XXX},
   year={2026}
 }
 ```
-
----
-
-This project is inspired by:
-
-* Knowledge graph embedding methods
-* Graph neural networks for recommendation
-* Recent advances in large language models for biomedical applications
-
 
 
 
