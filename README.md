@@ -1,5 +1,3 @@
----
-
 #  Common rules of the organization and architecture of cis-regulatory modules in the human and mouse genomes 
 
 ##  Overview
