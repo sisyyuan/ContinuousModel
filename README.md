@@ -44,12 +44,10 @@ By analyzing our recently predicted unprecedentedly complete maps of CRMs and co
 Each dataset (`.bed`) contains:
 
 * chromosome
-* start site
-* end site
+* start position
+* end position
 
-Additional file:
 
-* `name2id`: maps entity IDs to real herb/gene names
 
 ---
 
@@ -62,10 +60,7 @@ The rules governing the static organization and architecture of CRMs in the huma
 
 ## 🔬 Key Contributions
 
-* 
-* 
-* 
-* 
+We conclude that our CRMs are one of most comprehensively predicted full-length cis-regulatory sequence sets with high quality.
 
 ---
 
