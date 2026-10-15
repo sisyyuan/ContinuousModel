@@ -18,18 +18,17 @@ By analyzing our recently predicted unprecedentedly complete maps of CRMs and co
 ```
 .
 ├── code/                     # Data Analyses
-│   ├── train.py
-│   ├── test.py
-│   ├── train.py
-│   ├── test.py
-│   ├── train.py
-│   ├── test.py
-│   ├── train.py
-│   ├── test.py
-│   ├── train.py
-│   ├── test.py
-│   ├── train.py
-│   ├── test.py
+│   ├── 1-*  #CRM, NonCRM and TFBS etc. length, distance and genome coverage analysis
+│   ├── 2-*  #phylop score calculation and plot
+│   ├── 3-*  #predict the CRM's activation probability
+│   ├── 4-*  #calculate the correlation between CRM and potential target genes 
+│   ├── 5-*  #Core-promoter Containing analysis && gene type analysis by tau index score
+│   ├── 6-*  #TFBS density analysis
+│   ├── 7-*  #Motif analysis
+│   ├── 8-*  #LINSIGHT score analysis
+│   ├── 9-*  #DHS overlap analysis
+│   ├── 10-* #WGBS and GC content analysis
+│   ├── 11-* #Footprint analysis
 
 ├── data/
 │   ├── Human/
