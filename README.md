@@ -68,11 +68,11 @@ We conclude that our CRMs are one of most comprehensively predicted full-length 
 If you find this work useful, please cite:
 
 ```bibtex
-@article{XXX2026,
+@article{202X,
   title={Common rules of the organization and architecture of cis-regulatory modules in the human and mouse genomes},
-  author={XXX},
+  author={Sisi Yuan, Pengyu Ni and Zhengchang Su},
   journal={XXX},
-  year={2026}
+  year={202X}
 }
 ```
 
